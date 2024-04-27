@@ -1,7 +1,3 @@
-body {
-    background-color: #ffffff;
-}
-
 .header {
     padding: 92px 24px 96px 24px;
     display: grid;
@@ -14,18 +10,14 @@ body {
     list-style: circle;
     padding: 44px 36px 39px 25.52px;
     font-size: 18px;
+    line-height: 21px;
  }
 
 .header__links-list-item_no-bullit {
     list-style: none;
 }
 
-.header__link__gap {
-    display: flex;
-    column-gap: 35px;
-}
-
-.header__links-list-item {
+.header__link {
     text-underline-offset: 4px;
 }
 
@@ -34,7 +26,9 @@ body {
 }
 
 .header__logo-image {
-    padding: 1.16px 9.86px 0.81px 9.03px;
+    width: 148px;
+    height: 105px;
+    object-fit: contain;
 }
 
 .address {
@@ -48,7 +42,6 @@ body {
     line-height: 1.35;
     white-space: nowrap;
     text-underline-offset: 4px;
-    
 }
 
 .cover {
@@ -63,9 +56,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1100px 757px;
-    z-index: -1;
-    width: 1100px;
-    height: 757px;
+    width: 100%;
 }
 
 .overlay {
@@ -79,37 +70,32 @@ body {
 .cover__title {
     position: relative;
     display: flex;
+    gap: 20px;
     flex-direction: column;
     font-weight: 700;
     font-size: 100px;
     z-index: 1;
     letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
 .aligned-text {
-    text-transform: uppercase;
-    color: #ffffff;
-    font-size: 100px;
-    line-height: 115%;
+     line-height: 115%;
 }
 
 .aligned-text_center {
-    text-transform: uppercase;
-    color: #ffffff;
     text-align: center;
-    font-size: 100px;
-    line-height: 139%; 
+    line-height: 100%;
 }
 
 .aligned-text_right {
-    text-transform: uppercase;
-    color: #ffffff;
     text-align: right;
     line-height: 100%; 
 }
 
 .letter-spacing-extended {
-    letter-spacing: 57px;
+    letter-spacing: 60px;
 }
 
 .no-letter-spacing {
@@ -136,6 +122,7 @@ body {
 }
 
 .bet-button {
+    font-family: inherit;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 22px;
@@ -165,6 +152,7 @@ body {
 
 .lots__card-list {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 25px;
     margin-top: 27px;
     justify-content: space-evenly;
@@ -174,11 +162,14 @@ body {
 .card {
     height: 100%;
     color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .lots__card-list-item {
-    width: 334px;
-    height: 563px;
+    min-width: 334px;
+    min-height: 563px;
 }
 
 .card__title {
@@ -187,7 +178,6 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 51px;
-    padding-bottom: 430px;
     text-decoration: underline;
     text-underline-offset: 2px;
     font-size: 22px;
@@ -204,16 +194,12 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 48px;
-    padding-top: 371px;
     font-size: 20px;
     line-height: 120%;
 }
 
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     width: 334px;
     height: 563px;
     position: absolute;
@@ -222,9 +208,6 @@ body {
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     width: 334px;
     height: 563px;
     position: absolute;
@@ -233,9 +216,6 @@ body {
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     width: 334px;
     height: 563px;
     position: absolute;
@@ -284,7 +264,6 @@ body {
     font-size: 40px;
     line-height: 47px;
     padding-top: 136px;
-    padding-right: 402px;
     padding-left: 25px;
 }
 
@@ -296,7 +275,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     padding-left: 25px;
-    padding-top: 8px;
+    padding-top: 100px;
     letter-spacing: 0.01em;
 }
 
@@ -317,12 +296,11 @@ body {
 .footer__menu-list {
     list-style: none;
     text-align: center;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    text-underline-offset: 4px;
 }
 
 .footer__menu-link_active {
